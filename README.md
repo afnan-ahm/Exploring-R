@@ -37,3 +37,23 @@ filtered_toothgrowth <- ToothGrowth %>%
  head(diamonds)
   str(diamonds)
   glimpse()
+  
+  #select statement
+
+penguins %>%
+  select(-species)
+
+#rename statement
+
+penguins %>%
+  rename(island_new=island)
+
+#lowecase column name statement
+
+rename_with(penguins,tolower)
+
+#uppercase column name statement
+
+rename_with(penguins,toupper)
+
+clean_names(penguins)
